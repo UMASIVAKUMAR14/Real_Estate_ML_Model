@@ -10,15 +10,18 @@
     <link rel="stylesheet" href="app.css">
 </head>
 <body>
+    <!-- Background image and header -->
     <div class="img"></div>
+    <div class="h1"><h1>Home Price Predictor</h1></div>
+
     <form class="form">
         <!-- Takes the sqft of the house as a float -->
-        <h2>Total Square Feet Area</h2>
-        <input class="area" type="email" id="uiSqft" class="floatLabel" name="Squareft" value="1000"> 
+        <h2>Square Feet Area</h2>
+        <input class="area" type="email" id="uiSqft" class="floatLabel" name="Squareft" value="Fill an Area"> 
 
         <!-- A button bar denoting the # of bedrooms from one to nine -->
         <!-- Naming conventions of id in above section are used for name here because id must be unique while name can be repeated -->
-        <h2>Number of Bedrooms</h2>
+        <h2># of Bedrooms</h2>
         <div class="switch-field">
             <input type="radio" id="radio-bed-1" name="uiBed" value="1"/>
             <label for="radio-bed-1">1</label>
@@ -43,7 +46,7 @@
 
     <form class="form">
         <!-- A button bar denoting the # of bathrooms from one to nine -->
-        <h2>Number of Bathrooms</h2>
+        <h2># of Bathrooms</h2>
         <div class="switch-field">
             <input type="radio" id="radio-bath-1" name="uiBathrooms" value="1"/>
             <label for="radio-bath-1">1</label>
@@ -65,6 +68,29 @@
             <label for="radio-bath-9">9</label>
         </div>
 
+        <!-- A button bar denoting the # of balconies from one to nine -->
+        <h2># of Balconies</h2>
+        <div class="switch-field">
+            <input type="radio" id="radio-balcony-1" name="uiBalcony" value="1"/>
+            <label for="radio-balcony-1">1</label>
+            <input type="radio" id="radio-balcony-2" name="uiBalcony" value="2"/>
+            <label for="radio-balcony-2">2</label>
+            <input type="radio" id="radio-balcony-3" name="uiBalcony" value="3"/>
+            <label for="radio-balcony-3">3</label>
+            <input type="radio" id="radio-balcony-4" name="uiBalcony" value="4"/>
+            <label for="radio-balcony-4">4</label>
+            <input type="radio" id="radio-balcony-5" name="uiBalcony" value="5"/>
+            <label for="radio-balcony-5">5</label>
+            <input type="radio" id="radio-balcony-6" name="uiBalcony" value="6"/>
+            <label for="radio-balcony-6">6</label>
+            <input type="radio" id="radio-balcony-7" name="uiBalcony" value="7"/>
+            <label for="radio-balcony-7">7</label>
+            <input type="radio" id="radio-balcony-8" name="uiBalcony" value="8"/>
+            <label for="radio-balcony-8">8</label>
+            <input type="radio" id="radio-balcony-9" name="uiBalcony" value="9"/>
+            <label for="radio-balcony-9">9</label>
+        </div>
+
         <!-- A drop down menu of location choices -->
         <h2>Location</h2>
         <div>
@@ -74,9 +100,23 @@
             </select>
         </div>
 
+        <!-- A drop down menu of area type choices -->
+        <h2>Area Type</h2>
+        <div>
+            <select class="location" name="" id="uiarea_type">
+                <option value="" disabled="disabled" selected="selected">Choose an Area Type</option>
+                <option>Super-built Up Area</option>
+                <option>Built Up Area</option>
+                <option>Plot Area</option>
+                <option>Carpet Area</option>
+            </select>
+        </div>
+
         <!-- Calls the method to use the above values to estimate price -->
         <button class="submit" onclick="onClickedEstimatePrice()" type="button">Estimate Price</button>
         <div id="uiEstimatePrice" class="result"> <h2></h2> </div>
+
+        <br>
     </form>
 </body>
 </html>
